@@ -1,0 +1,60 @@
+---
+import Link from "@icons/Link.astro";
+import Repository from "@icons/Repository.astro";
+
+interface Props {
+    title:string,
+    description:string,
+    link:string,
+    github:string,
+    tags:string[],
+    image:string
+}
+
+const { title, description, link, github, tags, image } = Astro.props;
+---
+
+<article class="flex flex-col gap-5">
+  <img
+    class="rounded-md shadow-md shadow-white/20"
+    src={image}
+    alt={`Captura de pantalla de la ${title}`}
+  />
+  <div class="flex flex-col flex-1">
+    <h3 class="text-2xl text-cyan-400 font-semibold mb-2">{title}</h3>
+    <ul class="flex flex-wrap items-center gap-2 mb-2">
+      {tags.map((tag) => (
+        <li
+          class="text-xs px-4 py-0.5 rounded-xl text-white bg-white/10"
+        >
+          {tag}
+        </li>
+      ))}
+    </ul>
+    <p
+      class="text-neutral-200 text-pretty leading-relaxed mb-2 text-sm flex-1"
+    >
+      {description}
+    </p>
+    <div class="flex items-center gap-2">
+      <a
+        class="flex gap-1 items-center border border-cyan-400 bg-cyan-400/10 rounded-full px-4 py-1"
+        target="_blank"
+        rel="noopener noreferrer"
+        href={github}
+      >
+        <Repository class="size-6 text-white" />
+        <span class="text-white">Código</span>
+      </a>
+      <a
+        class="flex gap-1 items-center border border-sky-400 bg-cyan-400/10 rounded-full px-4 py-1"
+        target="_blank"
+        rel="noopener noreferrer"
+        href={link}
+      >
+        <Link class="size-6 text-white" />
+        <span class="text-white">Demo</span>
+      </a>
+    </div>
+  </div>
+</article>

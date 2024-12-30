@@ -1,0 +1,63 @@
+---
+import Code from "@icons/Code.astro";
+import Link from "@icons/Link.astro";
+import Repository from "@icons/Repository.astro";
+import ProjectItem from "./ProjectItem.astro";
+
+const projects = [
+  {
+    title:"Aplicacion para el manejo de tareas",
+    description:"Aplicación para el registro de tareas diarias de las personas, tienes diversas opciones para cada tarea registrada",
+    link:"https://todo-app-nine-silk.vercel.app/",
+    github:"https://github.com/chris-dev-software/todo-app",
+    tags:["HTML","React","JavaScript","TailwindCSS","Git"],
+    image:"/projects/todo-app.png"
+  },
+  {
+    title:"Prueba Técnica React + TypeScript",
+    description:"Prueba técnica que nos pide manejar los principales hooks de React, tales como useState, useEffect, useRef y useMemo",
+    link:"https://react-list-people.vercel.app/",
+    github:"https://github.com/chris-dev-software/react-list-people",
+    tags:["HTML","TypeScript","React","CSS","Git"],
+    image:"/projects/list-people.png",
+  },
+  {
+    title:"Aplicacion para una libreria",
+    description:"Aplicacion que nos muestra una lista de libros disponibles que podemos filtrarlos, y estos podemos agregarlos a una lista de lectura, utilizamos el localStorage para la persistencia de datos",
+    link:"https://react-book-list-three.vercel.app",
+    github:"https://github.com/chris-dev-software/react-book-list",
+    tags:["HTML","JavaScript","React","TailwindCSS","Git"],
+    image:"/projects/book-list.png"
+  },
+  {
+    title:"Tienda de productos en línea",
+    description:"Aplicación que permite agregar productos a un carrito e ir aumentando su cantidad como disminuirla y ademas permite eliminar todos los productos del carrito",
+    link:"https://react-shopping-cart-flax.vercel.app/",
+    github:"https://github.com/chris-dev-software/react-shopping-cart",
+    tags:["HTML","JavaScript","React","TailwindCSS","Git"],
+    image:"/projects/shopping-cart.png"
+  }
+]
+---
+
+<section id="projects" class="px-5 py-20">
+  <div class="max-w-6xl mx-auto w-full">
+    <div class="flex items-center gap-2 mb-10">
+      <Code class="size-12 text-white" />
+      <h1 class="text-white text-5xl">Proyectos</h1>
+    </div>
+
+    <div class="grid grid-cols-1 md:sm:grid-cols-2 gap-10 mt-16">
+      {projects.map((project) => (
+        <ProjectItem
+          title={project.title}
+          description={project.description}
+          link={project.link}
+          github={project.github}
+          tags={project.tags}
+          image={project.image}
+        />
+      ))}
+      </div>
+  </div>
+</section>

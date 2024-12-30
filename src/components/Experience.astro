@@ -1,0 +1,45 @@
+---
+import Briefcase from "@icons/Briefcase.astro";
+import ExperienceItem from "./ExperienceItem.astro";
+
+const experiences = [
+  {
+    title: "Junior Frontend React",
+    company: "Levelstudio",
+    date: "Abril 2024 - Actualidad",
+    responsibilities: [
+      "Crear landing pages para proyectos de criptomonedas y servicios usando Next.js, Tailwind CSS y Material 3.",
+      "Desarrollar módulos completos con enfoque en UX/UI.",
+      "Consumir APIs GraphQL para integrar datos desde el backend.",
+      "Apoyar en tareas básicas de backend con Python y Flask para generar exportaciones."
+    ]
+  },
+  {
+    title: "Practicante Frontend React",
+    company: "Municipalidad Distrital",
+    date: "Setiembre 2023 - Noviembre 2023",
+    responsibilities: [
+      "Realizar la parte de UX/UI del módulo de inventario de su intranet.",
+      "Consumir las APIS por parte del backend hecho con Laravel.",
+      "Manejar los estados de los datos con React para mostrarlos en la UI"
+    ]
+  }
+];
+---
+
+<section id="experience" class="px-5 py-20">
+  <div class="max-w-6xl mx-auto w-full">
+    <div class="flex items-center gap-2 mb-10">
+      <Briefcase class="size-12 text-white" />
+      <h1 class="text-white text-5xl">Experiencia</h1>
+    </div>
+    {experiences.map((experience) => (
+      <ExperienceItem
+        title={experience.title}
+        company={experience.company}
+        date={experience.date}
+        responsibilities={experience.responsibilities}
+      />
+    ))}
+  </div>
+</section>

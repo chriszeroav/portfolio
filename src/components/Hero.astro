@@ -1,0 +1,42 @@
+---
+import Github from "@icons/Github.astro";
+import Linkedin from "@icons/Linkedin.astro";
+import Download from "@icons/Download.astro"
+
+---
+
+<section id="home" class="px-5 py-20">
+  <div
+    class="max-w-6xl mx-auto w-full flex items-center justify-between gap-10"
+  >
+    <div class="flex flex-col gap-5">
+      <div>
+        <span class="text-base text-neutral-400">👋🏻Hola, soy Christopher</span>
+        <h1 class="text-white flex flex-col">
+          <span class="text-7xl font-extrabold tracking-wider">Desarrollador Web</span>
+          <span class="text-6xl font-bold tracking-wide">React & NextJS</span>
+        </h1>
+      </div>
+      <p class="text-neutral-300 text-pretty text-xl max-w-3xl font-medium">
+        Con más de <strong class="text-cyan-400"> 2 años de experiencia validada entre proyectos personales y reales </strong>, soy egresado de la carrera de Ingeniería de Sistemas Computacionales, actualmente en proceso de obtener mi bachillerato.
+      </p>
+      <div class="flex items-center gap-5">
+        <a href="https://www.linkedin.com/in/chris-dev-software/" target="_blank" class="flex items-center gap-3 bg-white/10 px-6 py-2 rounded-md">
+          <Linkedin/>
+          <span class="text-white text-lg tracking-wide">Linkedin</span>
+        </a>
+        <a href="https://github.com/chris-dev-software" target="_blank" class="flex items-center gap-3 bg-white/90 px-6 py-2 rounded-md">
+          <Github />
+          <span class="text-black text-lg">Github</span>
+        </a>
+      </div>
+    </div>
+    <div class="flex flex-col gap-4">
+        <img src="profile.webp" class="size-80 rounded-2xl object-cover" alt="" />
+        <a href="/cv.pdf" target="_blank" class="flex items-center bg-white/10 hover:bg-white/15 transition-colors justify-center rounded-md py-1">
+            <Download class="text-white size-8"/>
+            <span class="text-white text-lg">Curriculum Vitae</span>
+        </a>
+    </div>
+  </div>
+</section>

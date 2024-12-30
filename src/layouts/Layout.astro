@@ -1,0 +1,36 @@
+---
+import Background from "@components/Background.astro";
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header";
+import "@fontsource/poppins"
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/webp" href="/profile.webp" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Christopher Romero, desarrollador de software especializado en soluciones web y móviles. Explora mi portafolio, proyectos y servicios para potenciar tus ideas tecnológicas. ¡Conéctate ahora!" />
+    <title>Desarrollador de software | Christopher Romero</title>
+  </head>
+  <body>
+    <Background />
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style is:global >
+  html{
+    scroll-behavior: smooth;
+  }
+  
+  body{
+    font-family: 'Poppins', sans-serif;
+  }
+</style>
