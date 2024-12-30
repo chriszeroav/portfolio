@@ -15,8 +15,7 @@ El portafolio está desarrollado utilizando:
 
 Puedes contactarme mediante estos enlaces:
 
-- **Email**: [chis.dev.software@gmail.com](mailto:chris.dev.software@gmail.com)
-- **LinkedIn**: [linkedin.com/in/chris-dev-software](https://www.linkedin.com/in/chris-dev-software/)
-- **GitHub**: [github.com/chris-dev-software](https://github.com/chris-dev-software)
+- **Email**: [chis.zeroav.com](mailto:chris.zeroav@gmail.com)
+- **GitHub**: [github.com/chriszeroav](https://github.com/chriszeroav)
 
 ¡Gracias por visitar mi portafolio! 🚀
